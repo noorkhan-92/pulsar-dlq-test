@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    function:
+      definition: timeSupplier;timeProcessor
+    stream:
+      bindings:
+        timeSupplier-out-0:
+          producer:
+            use-native-encoding: true
+        timeProcessor-in-0:
+          destination: timeSupplier-out-0
+          consumer:
+            use-native-decoding: true
+
+      pulsar:
+        bindings:
+          timeSupplier-out-0:
+            producer:
+              schema-type: JSON
+              message-type: global.din.pulsartest.PulsarTestApplication.Time
+
+          timeProcessor-in-0:
+            consumer:
+              schema-type: JSON
+              message-type: global.din.pulsartest.PulsarTestApplication.Time
+
+
+server:
+  port: 8081
