@@ -1,4 +1,9 @@
 spring:
+  pulsar:
+    client:
+      service-url: pulsar://localhost:57251
+    administrator:
+      service-url: http://localhost:51965
   cloud:
     function:
       definition: timeSupplier;timeProcessor
