@@ -13,7 +13,6 @@ class PulsarTestApplication() {
     fun testListener(): Consumer<Message<TestMessage>> = Consumer {
             message ->
         println(message.payload)
-        return@Consumer
     }
 
     @JvmRecord
