@@ -1,33 +1,28 @@
 spring:
   pulsar:
     client:
-      service-url: pulsar://localhost:57251
-    administrator:
-      service-url: http://localhost:51965
+      service-url: pulsar://localhost:6650
   cloud:
     function:
-      definition: timeSupplier;timeProcessor
+      definition: testListener
     stream:
       bindings:
-        timeSupplier-out-0:
-          producer:
-            use-native-encoding: true
-        timeProcessor-in-0:
-          destination: timeSupplier-out-0
+        testListener-in-0:
+          destination: test
           consumer:
             use-native-decoding: true
 
       pulsar:
         bindings:
-          timeSupplier-out-0:
-            producer:
-              schema-type: JSON
-              message-type: global.din.pulsartest.PulsarTestApplication.Time
-
-          timeProcessor-in-0:
+          testListener-in-0:
             consumer:
+              subscription-type: Shared
+              negative-ack-redelivery-delay: 1s
+              dead-letter-policy:
+                dead-letter-topic: notification-dlq
+                max-redeliver-count: 5
               schema-type: JSON
-              message-type: global.din.pulsartest.PulsarTestApplication.Time
+              message-type: global.din.pulsartest.PulsarTestApplication.TestMessage
 
 
 server:

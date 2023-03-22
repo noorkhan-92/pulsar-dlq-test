@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.pulsar:spring-pulsar:0.1.1-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230202.101408-89.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230322.013903-204.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230202.101408-89-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230322.013903-204-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230202.101408-89-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/pulsar/spring-pulsar/0.1.1-SNAPSHOT/spring-pulsar-0.1.1-20230322.013903-204-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
